@@ -1,1 +1,1 @@
- /bin/sh -c bash\ run.sh
+worker /bin/sh -c bash\ run.sh
