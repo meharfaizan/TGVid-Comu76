@@ -7,7 +7,12 @@ WORKDIR /bot
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get -qq update && apt -qq install -y git wget pv jq python3-dev mediainfo
 # Change repo 
-RUN echo deb http://http.us.debian.org/debian/ testing non-free contrib main > /etc/apt/sources.list && \
+RUN echo deb http://deb.debian.org/debian bullseye main contrib non-free
+deb-src http://deb.debian.org/debian bullseye main contrib non-free
+deb http://deb.debian.org/debian-security bullseye/updates main contrib non-free
+deb-src http://deb.debian.org/debian-security bullseye/updates main contrib non-free
+deb http://deb.debian.org/debian bullseye-updates main contrib non-free
+deb-src http://deb.debian.org/debian bullseye-updates main contrib non-free testing non-free contrib main > /etc/apt/sources.list && \
     apt -qq update
 # Install other dependencies
 RUN apt-get install libcrypt1 -y
