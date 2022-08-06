@@ -3,4 +3,3 @@ build:
     worker: Dockerfile
 run:
   worker: bash run.sh
-worker: docker build -f [Dockerfile] .
