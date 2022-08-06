@@ -2,5 +2,4 @@ build:
   docker:
     worker: Dockerfile
 run:
-  worker: docker build .
   worker: bash run.sh
