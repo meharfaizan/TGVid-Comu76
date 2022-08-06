@@ -27,7 +27,7 @@ cd ffmpeg-4.2.1  && \
 make  && \
 make -j8  && \
 make install  && \
-cp ffmpeg /usr/bin/  && \
+cp ffmpeg /usr/local/  && \
 make distclean  && \
 hash -r  && \
 ffmpeg 2>&1 | head -n1
