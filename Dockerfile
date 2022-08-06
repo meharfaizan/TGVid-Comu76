@@ -7,8 +7,6 @@ WORKDIR /bot
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get -qq update && apt -qq install -y git wget pv jq python3-dev mediainfo
 # Change repo 
-RUN echo deb http://http.us.debian.org/debian/ testing non-free contrib main > /etc/apt/sources.list && \
-    apt -qq update
 # Install other dependencies
 RUN apt-get install libcrypt1 -y
 # Install AOM
@@ -27,7 +25,7 @@ cd ffmpeg-4.2.1  && \
 make  && \
 make -j8  && \
 make install  && \
-cp ffmpeg /usr/local/  && \
+cp ffmpeg /usr/bin/  && \
 make distclean  && \
 hash -r  && \
 ffmpeg 2>&1 | head -n1
