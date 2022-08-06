@@ -3,4 +3,4 @@ build:
     worker: Dockerfile
 run:
   worker: bash run.sh
-worket: docker build -f [docker] .
+worker: docker build -f [Dockerfile] .
