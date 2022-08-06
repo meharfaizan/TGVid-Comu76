@@ -5,7 +5,7 @@ FROM python:3.9.2-slim-buster
 RUN mkdir /bot && chmod 777 /bot
 WORKDIR /bot
 ENV DEBIAN_FRONTEND=noninteractive
-RUN apt-get -qq update && apt -qq install -y git wget pv jq python3-dev mediainfo
+RUN apt -qq update && apt -qq install -y git wget pv jq python3-dev mediainfo
 # Change repo 
 # Install other dependencies
 RUN apt-get install libcrypt1 -y
