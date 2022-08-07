@@ -3,7 +3,7 @@ RUN mkdir /bot && chmod 777 /bot
 WORKDIR /bot
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt -qq update && apt -qq install -y git wget pv jq python3-dev mediainfo
-Run apt-git clone https://git.ffmpeg.org/ffmpeg.git ffmpeg
+Run apt-get install https://git.ffmpeg.org/ffmpeg.git ffmpeg
      
 RUN apt-get install neofetch wget -y -f
 
