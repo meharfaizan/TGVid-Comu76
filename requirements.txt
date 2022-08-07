@@ -1,5 +1,7 @@
-pyrogram==1.4.16
-TgCrypto
-python-dotenv
-hachoir
-ffmpeg-python
+aiohttp
+python-decouple
+pyaesni
+psutil
+speedtest-cli
+https://github.com/1Danish-00/Telethon/archive/master.zip
+html_telegraph_poster
